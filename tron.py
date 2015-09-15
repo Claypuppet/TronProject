@@ -3,7 +3,7 @@
 
 if __name__ == "__main__":
 	""" START EDITING HERE """
-	import jamey as AI_A
+	import teamred as AI_A
 	import saskia as AI_B
 	
 	DEV = {

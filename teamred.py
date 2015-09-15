@@ -1,5 +1,5 @@
 # The name of the agent. This is a REQUIRED STRING.
-name = 'Jamey'
+name = 'Team Red'
 
 import random
 
@@ -16,7 +16,12 @@ def turn(data):
 
 	globs['data'] = data
 
-	choice = 'NORTH'
+	x = globs['data']['agents'][0]['position']['x']
+	y = globs['data']['agents'][0]['position']['y']
+
+	viable = viableDirections(x, y)
+
+	choice = viable[random.randint(0, len(viable)-1)]
 	
 	return choice
 
@@ -24,10 +29,28 @@ def fill():
 	global globs
 
 
-def viableDirections():
+def viableDirections(x, y):
 	global globs
 
+	viable = [];
 
+	width = globs['data']['world_width_current']
+	height = globs['data']['world_height_current']
+
+	board = globs['data']['world_data']
+
+	if (y != 0):
+		if(board[y-1][x]['agentID'] == None):
+			viable.append('NORTH')
+	if (x != width-1):
+		if(board[y][x+1]['agentID'] == None):
+			viable.append('EAST')
+	if (y != height-1):
+		if(board[y+1][x]['agentID'] == None):
+			viable.append('SOUTH')
+	if (x != 0):
+		if(board[y][x-1]['agentID'] == None):
+			viable.append('WEST')
 
 	return viable
 
