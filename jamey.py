@@ -17,20 +17,23 @@ def turn(data):
 	# When using imports, make sure they'll run on my computer. Please, ask me to do a test-run BEFORE submitting.
 	import random
 	
-	width = data.world_width_current
-	height = data.world_height_current
+	global width = data.world_width_current
+	global height = data.world_height_current
 
-	board = world_data
+	global board = world_data
 
-	player = {
+	global player = {
 		'x' = data.agent[0].position.x,
 		'y' = data.agent[0].position.y
 	}
 
-	enemy = {
+	global enemy = {
 		'x' = data.agent[1].position.x,
 		'y' = data.agent[1].position.y
 	}
+
+
+	
 
 
 	return choice
