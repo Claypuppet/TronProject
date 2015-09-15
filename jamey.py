@@ -12,24 +12,30 @@ globs = {
 # Make sure you always return one of these (no typos), as failing to do so will result in a match loss...
 # Also note: if a match hangs/ breaks while the wrapper was working on your turn, you will lose that match!
 def turn(data):
-	global globs;
+	global globs
 
-	globs['data'] = data;
+	globs['data'] = data
 
+	choice = 'NORTH'
 	
 	return choice
 
-def fill () :
-	global globs;
+def fill():
+	global globs
 
 
-def viableDirections () :
-	
-
-def detectLock () :
-
-def determineChoice () :
-
-def startingPosition () :
+def viableDirections():
+	global globs
 
 
+
+	return viable
+
+def detectLock():
+	return None
+
+def determineChoice():
+	return None
+
+def startingPosition():
+	return None
