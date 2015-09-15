@@ -40,7 +40,7 @@ def fill():
 def viableDirections(x, y):
 	global globs
 
-	viable = [];
+	viable = []
 
 	width = globs['data']['world_width_current']
 	height = globs['data']['world_height_current']
