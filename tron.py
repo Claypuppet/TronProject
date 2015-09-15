@@ -4,7 +4,7 @@
 if __name__ == "__main__":
 	""" START EDITING HERE """
 	import teamred as AI_A
-	import saskia as AI_B
+	import lorenz as AI_B
 	
 	DEV = {
 		'debug_competition': True, # Default: False
