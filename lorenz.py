@@ -2,6 +2,7 @@
 name = 'Team Green'
 
 import random
+import time
 
 globs = {
 	'data': None
@@ -14,14 +15,21 @@ globs = {
 def turn(data):
 	global globs
 
+	start_time = time.time()
 	globs['data'] = data
 
 	x = globs['data']['agents'][1]['position']['x']
 	y = globs['data']['agents'][1]['position']['y']
 
+	
+
 	viable = viableDirections(x, y)
 
 	choice = viable[random.randint(0, len(viable)-1)] if len(viable) > 0 else 'SUDOKU'
+
+	end_time = time.time() - start_time
+
+	print ('time elapssed: ' + str(end_time))
 	
 	return choice
 
