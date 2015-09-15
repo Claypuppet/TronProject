@@ -3,8 +3,8 @@
 
 if __name__ == "__main__":
 	""" START EDITING HERE """
-	import lorenz as AI_A
-	import lorenz as AI_B
+	import menno as AI_A
+	import saskia as AI_B
 	
 	DEV = {
 		'debug_competition': True, # Default: False
