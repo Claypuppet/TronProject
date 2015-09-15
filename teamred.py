@@ -20,8 +20,8 @@ def turn(data):
 	y = globs['data']['agents'][0]['position']['y']
 
 	viable = viableDirections(x, y)
-
-	choice = viable[random.randint(0, len(viable)-1)]
+	
+	choice = viable[random.randint(0, len(viable)-1)] if len(viable) > 0 else 'SUDOKU'
 	
 	return choice
 
@@ -61,4 +61,6 @@ def determineChoice():
 	return None
 
 def startingPosition():
+	strat = ['fill', 'cutoff', 'survive']
+
 	return None
