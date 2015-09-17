@@ -7,11 +7,11 @@ if __name__ == "__main__":
 	import lorenz as AI_B
 	
 	DEV = {
-		'debug_competition': True, # Default: False
-		'debug_data': True, # Default: False
+		'debug_competition': False, # Default: False
+		'debug_data': False, # Default: False
 		#'debug_data_world': True, # Default: False
-		'debug_match': True, # Default: False
-		'debug_turn': True, # Default: False
+		'debug_match': False, # Default: False
+		'debug_turn': False, # Default: False
 		'debug_world': True, # Default: False
 		#'display_results': False, # Default: True
 		'number_of_matches': 3, # Default: 7
